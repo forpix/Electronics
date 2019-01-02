@@ -11,6 +11,8 @@ import groovy.json.JsonOutput
 import java.net.URL
 def signature = 'new groovy.json.JsonSlurperClassic'
 org.jenkinsci.plugins.scriptsecurity.scripts.ScriptApproval.get().approveSignature(signature)
+import org.jenkinsci.plugins.scriptsecurity.scripts.*
+ScriptApproval.get().getPendingScripts().each {pending -> ScriptApproval.get().approveScript(pending.getHash())}
 
 
 node {
