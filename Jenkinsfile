@@ -13,6 +13,8 @@ import java.net.URL
 import org.jenkinsci.plugins.scriptsecurity.scripts.*
 ScriptApproval.get().getPendingScripts().each {pending -> ScriptApproval.get().approveScript(pending.getHash())}
 
+def signature = 'new groovy.json.JsonSlurperClassic'
+org.jenkinsci.plugins.scriptsecurity.scripts.ScriptApproval.get().approveSignature(signature)
 
 node {
 cleanWs()
