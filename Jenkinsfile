@@ -4,6 +4,11 @@ import jenkins.model.*;
 import org.jenkinsci.plugins.scriptsecurity.scripts.*;
 import org.jenkinsci.plugins.scriptsecurity.sandbox.whitelists.*;
 
+def signature = 'new groovy.json.JsonSlurperClassic'
+org.jenkinsci.plugins.scriptsecurity.scripts.ScriptApproval.get().approveSignature(signature)
+
+
+
 println "///////////////////////////////////////////////////////////////////////////"
 println "Init Hook: Whitelist methods/functions for script approval plugin"
 println "///////////////////////////////////////////////////////////////////////////"
