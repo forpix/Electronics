@@ -17,7 +17,8 @@ org.jenkinsci.plugins.scriptsecurity.scripts.ScriptApproval.get().approveSignatu
 import org.jenkinsci.plugins.scriptsecurity.scripts.*
 ScriptApproval.get().getPendingScripts().each {pending -> ScriptApproval.get().approveScript(pending.getHash())}
 
-
+timestamps {
+}
 
 node {
 cleanWs()
