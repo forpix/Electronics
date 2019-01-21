@@ -18,7 +18,7 @@ import org.jenkinsci.plugins.scriptsecurity.scripts.*
 ScriptApproval.get().getPendingScripts().each {pending -> ScriptApproval.get().approveScript(pending.getHash())}
 
 timestamps {
-}
+
 
 node {
 cleanWs()
@@ -62,4 +62,5 @@ cleanWs()
           git push origin --tags
           '''
   }
+}
 }
