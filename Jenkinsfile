@@ -9,6 +9,13 @@ import groovy.json.JsonSlurperClassic
 import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
 import java.net.URL
+import jenkins.*
+import jenkins.model.*
+import hudson.model.*
+import jenkins.model.Jenkins
+import org.jenkinsci.plugins.authorizeproject.*
+import org.jenkinsci.plugins.authorizeproject.strategy.*
+import jenkins.security.QueueItemAuthenticatorConfiguration
 
 
 def signature = 'new groovy.json.JsonSlurperClassic'
